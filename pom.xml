@@ -10,6 +10,10 @@
    <properties>
         <java.home>/usr/bin/javac</java.home>
   </properties>
+  <properties>
+ <maven.compiler.source>1.8</maven.compiler.source>
+ <maven.compiler.target>1.8</maven.compiler.target>
+</properties>
 
   <dependencies>
     <dependency>
