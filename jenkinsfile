@@ -40,7 +40,7 @@ pipeline {
 
        stage ('Deploy_to_tomcat') {
           steps {
-                  sh 'scp  target/*.war /home/ubuntu/apache-tomcat-10.1.19/webapps/webapp.war'
+                  sh 'cp  target/*.war /home/ubuntu/apache-tomcat-10.1.19/webapps/webapp.war'
          }
       }
  }
