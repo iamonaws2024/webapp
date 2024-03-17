@@ -1,8 +1,8 @@
 pipeline {
-    agent none
+    agent any
     stages {
         stage('OpenJDK 7') {
-            agent {
+            tools {
                 docker { image 'openjdk:7-jdk' }
             }
             steps {
@@ -10,7 +10,7 @@ pipeline {
             }
         }
         stage('Java 8') {
-            agent {
+            tools {
                 docker { image 'openjdk:8-jdk' }
             }
             steps {
