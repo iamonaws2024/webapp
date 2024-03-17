@@ -33,6 +33,9 @@ pipeline {
         }
 
         stage ('SAST') {
+             tools {
+                jre '21.0.2'
+             }
             steps {
                  withSonarQubeEnv('sonar') {
                  sh 'mvn sonar:sonar'
