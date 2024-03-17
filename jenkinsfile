@@ -33,12 +33,11 @@ pipeline {
         }
 
         stage ('SAST') {
-             tools {
-                jdk 'java-21-openjdk-amd64'
-             }
+            
             steps {
                  withSonarQubeEnv('sonar') {
-                 sh 'mvn sonar:sonar'
+sh 'docker run                 
+sh 'mvn sonar:sonar'
                  
 }
                    
