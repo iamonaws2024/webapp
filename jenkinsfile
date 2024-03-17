@@ -44,5 +44,9 @@ stage ('Build') {
                   sh 'cp  target/*.war /home/ubuntu/apache-tomcat-10.1.19/webapps/webapp.war'
          }
       }
+       stage ('DAST')
+          steps {
+                  sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t https://github.com/iamonaws2024/webapp.git'
+          }
  }
 }
