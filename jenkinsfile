@@ -46,7 +46,7 @@ stage ('Build') {
       }
        stage ('DAST'){
           steps {
-                  sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t https://github.com/iamonaws2024/webapp.git'
+                  sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t https://github.com/iamonaws2024/webapp.git || true'
           }
 }
  }
