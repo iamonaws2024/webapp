@@ -1,23 +1,21 @@
 pipeline {
     agent any
-    tools {
-        jdk '11.0.22'
-        jdk '21.0.2'
-    }
     stages {
-        stage('java 11') {
+        stage('OpenJDK 7') {
+            agent {
+                docker { image 'openjdk:7-jdk' }
+            }
             steps {
                 sh 'java -version'
-                sh 'javac -version'
             }
         }
-        stage('java 21') {
+        stage('Java 8') {
+            agent {
+                docker { image 'openjdk:8-jdk' }
+            }
             steps {
                 sh 'java -version'
-                sh 'javac -version'
             }
         }
     }
 }
-
-In the above script:
