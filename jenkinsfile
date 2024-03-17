@@ -34,7 +34,7 @@ pipeline {
 
         stage ('SAST') {
              tools {
-                jre '21.0.2'
+                jdk '21.0.2'
              }
             steps {
                  withSonarQubeEnv('sonar') {
